@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Recomendation system</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
+  
+  </style>
+</head>
+<body>
+  <h1>Job Recommendation system</h1>
+  <div class="container">
+  <form action="/predict" method="post">
+    <div class="input-group">
+        <label for="gender">gender:</label>
+        <select name="gender" id="gender">
+          <option value="0">Female</option>
+          <option value="1">Male</option>
+        </select><br><br>
+    </div>
+    <br>
+    <div class="input-group">
+    <Label for="branch">Enter branch:</Label>
+  </div>
+    <input type="number" name="branch" placeholder="branch" required="required" /><br>
+      <br>
+    <div class="input-group">
+    <Label for="ssc_cgpa">Enter ssc_cgpa:</Label>
+  </div>
+    <input type="number" name="ssc_cgpa" placeholder="ssc_cgpa" required="required" /><br>
+    <br>
+    <div class="input-group">
+    <Label for="hsc_cgpa">Enter hsc_cgpa:</Label>
+  </div>
+    <input type="number" name="hsc_cgpa" placeholder="hsc_cgpa" required="required" /><br>
+    <br>
+    <div class="input-group">
+      <Label for="ug_cgpa">Enter ug_cgpa:</Label>
+    </div>
+    <input type="number" name="ug_cgpa" placeholder="ug_cgpa" required="required" /><br>
+      <br>
+      <div class="input-group">
+        <Label for="workexp">Enter workexp:</Label>
+      </div>
+    <input type="number" name="workexp" placeholder="workexp" required="required" /><br>
+        <br>
+      <div class="input-group">
+          <Label for="num_of_projects">Enter num_of_projects:</Label>
+        </div>
+    <input type="number" name="num_of_projects" placeholder="num_of_projects" required="required" /><br>
+          <br>
+      <div class="input-group">
+            <Label for="num_of_global_certifications">Enter num_of_global_certifications:</Label>
+        </div>
+    <input type="number" name="num_of_global_certifications" placeholder="num_of_global_certifications" required="required" /><br>
+            <br>
+            <div class="input-group">
+              <Label for="github_acc">Enter github_acc:</Label>
+        </div>
+    <input type="number" name="github_acc" placeholder="github_acc" required="required" /><br>
+              <br>
+              <div class="input-group">
+                <Label for="github_repo">Enter github_repo:</Label>
+        </div>
+    <input type="number" name="github_repo" placeholder="github_repo" required="required" /><br>
+                <br>
+          
+    <input type="submit" value="Predict">
+</form>
+</div>
+<br>
+<br>
+<h2>Prediction :</h2>
+{{prediction}}
+</body>
+</html>
